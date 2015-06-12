@@ -35,7 +35,18 @@
 
 	var Twitter = {
 		init: function( config ) {
-			this.url = 'http://search.twitter.com/search.json?q=' + config.query + '&callback=?';
+
+			/*
+				The Twitter API has changed since this course was published. The material in this lesson is still relevant to the task of understanding and using JSON APIs, but the details of the source code have changed somewhat. The acompanying source code has been updated to provide a working example of retreiving JSON data from a web service.
+
+				See https://dev.twitter.com/docs/api/1.1/get/search/tweets for information about the updated API.
+				
+				Because the Twitter API has changed and now requires validation, we've created a cached version of the JSON returned by this sample query. Open the following URL in a browser to see the raw JSON data.
+
+				See the comments in the `fetch` function below for details of how the returned data signature has changed in the Twitter 1.1 API.
+			*/
+
+			this.url = 'https://gist.githubusercontent.com/adamarthurryan/3d0fa8db6d8c64add82b/raw/450d85cb569447c934ffa3df79e953bb2f25c272/justin-beiber.json';
 			this.template = config.template;
 			this.container = config.container;
 
@@ -51,14 +62,22 @@
 
 		fetch: function() {
 			var self = this;
-
+			console.log(this.url);
 			$.getJSON( this.url, function( data ) {
-				self.tweets = $.map( data.results, function( tweet ) {
+				console.log(data);
+
+				// the results from the query are now returned in the Twitter 1.1 API as `statuses`
+				self.tweets = $.map( data.statuses, function( tweet ) {
 					return {
-						author: tweet.from_user,
 						tweet: tweet.text,
-						thumb: tweet.profile_image_url,
-						url: 'http://twitter.com/' + tweet.from_user + '/status/' + tweet.id_str
+
+						// the `from_user` field has changed in the Twitter 1.1 API to `user.screen_name`
+						author: tweet.user.screen_name,
+
+						// the `profile_image_url` field has changed in the Twitter 1.1 API to `user.profile_image_url`
+						thumb: tweet.user.profile_image_url,
+
+						url: 'http://twitter.com/' + tweet.user.screen_name + '/status/' + tweet.id_str
 					};
 				});
 
