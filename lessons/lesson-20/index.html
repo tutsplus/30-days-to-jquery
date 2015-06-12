@@ -40,7 +40,7 @@
 				The Twitter API has changed since this course was published. The material in this lesson is still relevant to the task of understanding and using JSON APIs, but the details of the source code have changed somewhat. The acompanying source code has been updated to provide a working example of retreiving JSON data from a web service.
 
 				See https://dev.twitter.com/docs/api/1.1/get/search/tweets for information about the updated API.
-				
+
 				Because the Twitter API has changed and now requires validation, we've created a cached version of the JSON returned by this sample query. Open the following URL in a browser to see the raw JSON data.
 
 				See the comments in the `fetch` function below for details of how the returned data signature has changed in the Twitter 1.1 API.
@@ -62,9 +62,7 @@
 
 		fetch: function() {
 			var self = this;
-			console.log(this.url);
 			$.getJSON( this.url, function( data ) {
-				console.log(data);
 
 				// the results from the query are now returned in the Twitter 1.1 API as `statuses`
 				self.tweets = $.map( data.statuses, function( tweet ) {
