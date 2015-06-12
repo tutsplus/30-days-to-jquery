@@ -1,0 +1,205 @@
+.question, #results
+	padding 35px 80px
+	box-sizing border-box
+	border 1px solid #d3d3ca
+	position relative
+	background white
+
+	h3
+		font-size 16px
+		color #494949
+		text-shadow 0 1px 0 white
+		margin-bottom 25px
+		margin-right 40px
+		font-family sans-serif
+
+.question
+	margin-bottom 10px
+
+	input[type=text]
+		font-size 14px
+
+// Circular bubble with the current question number
+span.count
+	background #edecde
+	border 1px solid #d4d3c7
+	color #494949
+	text-shadow 0 1px 0 #72726e
+	border-radius 100px
+	padding 0 9px
+	font-size 12px
+	font-weight normal
+	margin 7px 22px 0 -55px
+	float left
+	position relative
+	top -2px
+	line-height 2em
+
+
+
+// True or False
+.question .bool
+	overflow hidden
+	background url(../images/stripeBG.png)
+	padding 21px
+	float left
+
+.bool li
+	float left
+	margin-right 20px
+
+	&:last-child
+		margin-right 0
+
+.bool input[type=radio]
+	width 20px
+	-webkit-appearance none
+	
+.bool label
+	width 185px
+	height 34px
+	line-height 34px
+	display inline-block
+	text-align center
+	font-weight bold
+	margin-left -25px
+	cursor pointer
+
+.correct
+	box-shadow inset 0 0 0 4px #b8d86b;
+
+.incorrect
+	box-shadow inset 0 0 0 4px #f8734a;
+
+.no-boxshadow 
+	.correct
+		outline 4px solid #b8d86b
+	.incorrect
+		outline 4px solid #f8734a
+
+span.divider
+	display: block;
+	color: red;
+	clear: left;
+	float: left;
+	width: 83%;
+	margin-top: 50px;
+	border-top: 1px dashed #e5e5e5;
+
+// Textareas
+.CodeMirror
+	min-height 150px
+	border-radius 5px
+	padding 20px
+	border 1px solid #e5e5e5
+
+.CodeMirror-focused
+	box-shadow 0 0 0 1px #fbbc4b, 0 0 0 2px #fff0d7, 0 0 0 3px #fff6e6
+
+.CodeMirror-scroll
+	height auto
+
+// Multiple Choice
+.multiple
+	background url(../images/stripeBG.png)
+	text-align center
+	padding 30px 0
+	height 40px
+
+	li
+		display inline
+		margin-right 48px
+		font-size 16px
+		line-height 40px
+
+		&:last-child
+			margin-right 0
+
+		input
+			margin-right 10px
+			cursor pointer
+
+		label
+			cursor pointer
+			
+
+
+.multiple input:checked:before,
+.multiple input[type=radio]
+	position:absolute;
+	clip rect(0,0,0,0);
+	clip rect(0 0 0 0);
+
+
+.multiple input[type="radio"] + label:before
+	content url('../images/radio-on.png'); /* preload hover state */
+	content url('../images/radio-off.png');
+	position relative
+	top 2px
+	margin-right 10px
+
+
+.multiple input[type="radio"]:checked + label:before,
+.multiple input[type="radio"]:hover + label:before
+	content url('../images/radio-on.png');
+
+
+
+
+// Text Entry
+.question input[type=text]
+	border-radius 5px
+	border 1px solid #e5e5e5
+	padding 0 10px
+	height 45px
+	width 60%
+	outline 0
+
+	&:focus, &:hover
+		box-shadow 0 0 0 1px #fbbc4b, 0 0 0 2px #fff0d7, 0 0 0 3px #fff6e6
+
+// Solutions
+.solutions 
+	span.divider
+		display none
+
+	.question
+		min-height 100%
+		padding-bottom 60px
+
+		// When no notes are provided
+		+ .question
+			margin-top 40px
+
+	.question input[type=submit]
+		display none
+
+.notes
+	margin-top 25px
+	margin-bottom 60px
+	padding-left 10px
+	border-left 10px solid #fbbc4b
+
+	p
+		padding-bottom 0
+	
+mark
+	background none
+	color #494949
+
+
+.question form
+	clearfix()
+
+
+.textarea h3:after
+	content attr(data-syntax);
+	background #E56718;
+	color white;
+	padding .5em 1em;
+	text-shadow 0 1px 0 #80390D;
+	position absolute;
+	right 0;
+	top 0;
+	font-family monospace;
+	font-size .8em;

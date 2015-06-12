@@ -1,0 +1,85 @@
+boolean-button(start, end)
+	border-radius 40px
+	background end
+	background -webkit-linear-gradient(start, end)
+	background -moz-linear-gradient(start, end)
+	background -o-linear-gradient(start, end)
+	background -ms-linear-gradient(start, end)
+	background linear-gradient(start, end)
+	outline 0
+
+.true, .false
+	boolean-button(#bcbcbc, #858585)
+	background end
+	background -moz-linear-gradient(start, end)
+	background -webkit-linear-gradient(start, end)
+	background -o-linear-gradient(start, end)
+	background -ms-linear-gradient(start, end)
+	background linear-gradient(start, end)
+	border 1px solid #8d8d8d
+	box-shadow inset 0 2px 0 #cccccc
+	color #fff
+	text-shadow 0 -1px 0 #919191
+
+
+
+.true:active,
+.true:hover,
+input[type=radio]:checked + .true
+	background #b3d662
+	background -webkit-linear-gradient(#dceca8, #b3d662)
+	background -moz-linear-gradient(#dceca8, #b3d662)
+	background -o-linear-gradient(#dceca8, #b3d662)
+	background -ms-linear-gradient(#dceca8, #b3d662)
+	background linear-gradient(#dceca8, #b3d662)
+	box-shadow inset 0 2px 0 #e5f1be, 0 -2px 5px #cbe190
+	border 1px solid #9ab359
+	color #3d3d3d
+	text-shadow 0 1px 0 #deedb7
+	outline 0
+
+.false:active,
+.false:hover,
+.bool input[type=radio]:checked + .false
+	background #db4d35
+	background -webkit-linear-gradient(#ec7e5b, #db4d35)
+	background -moz-linear-gradient(#ec7e5b, #db4d35)
+	background -o-linear-gradient(#ec7e5b, #db4d35)
+	background -ms-linear-gradient(#ec7e5b, #db4d35)
+	background linear-gradient(#ec7e5b, #db4d35)
+	box-shadow inset 0 2px 0 #f0997e, 0 -1px 2px darken(#f0997e, 1%)
+	border 1px solid #de5941
+	color #fff
+	text-shadow 0 -1px 0 #c25e43
+
+.twitter a
+	background #80d2ff
+	background url(../images/twitter-bird.png) 15px center no-repeat, -webkit-linear-gradient(#80d2ff, #55afff)
+	background url(../images/twitter-bird.png) 15px center no-repeat, -moz-linear-gradient(#80d2ff, #55afff)
+	background url(../images/twitter-bird.png) 15px center no-repeat, -o-linear-gradient(#80d2ff, #55afff)
+	background url(../images/twitter-bird.png) 15px center no-repeat, -ms-linear-gradient(#80d2ff, #55afff)
+	background url(../images/twitter-bird.png) 15px center no-repeat, linear-gradient(#80d2ff, #55afff)
+	padding 9px 24px 7px 35px
+	border-radius 25px
+	color white
+	text-shadow 0 1px 0 #386adb
+	text-decoration none
+	border 1px solid #1E87D9;
+	line-height 1.5em
+	-webkit-box-shadow: inset 0 2px 0 #a3deff, 0 1px 3px #d4d4d4;
+	-moz-box-shadow: inset 0 2px 0 #a3deff, 0 1px 3px #d4d4d4;
+	box-shadow: inset 0 2px 0 #a3deff, 0 1px 3px #d4d4d4;
+
+.twitter a:hover
+	background darken(#80d2ff, 10%)
+	background url(../images/twitter-bird.png) 15px center no-repeat, -webkit-linear-gradient(darken(#80d2ff, 10%), darken(#55afff, 10%))
+	background url(../images/twitter-bird.png) 15px center no-repeat, -moz-linear-gradient(darken(#80d2ff, 10%), darken(#55afff, 10%))
+	background url(../images/twitter-bird.png) 15px center no-repeat, -o-linear-gradient(darken(#80d2ff, 10%), darken(#55afff, 10%))
+	background url(../images/twitter-bird.png) 15px center no-repeat, -ms-linear-gradient(darken(#80d2ff, 10%), darken(#55afff, 10%))
+	background url(../images/twitter-bird.png) 15px center no-repeat, linear-gradient(darken(#80d2ff, 10%), darken(#55afff, 10%))
+
+.twitter a:active,
+.twitter a:focus
+	-webkit-box-shadow: 0 1px 3px #d4d4d4;
+	-moz-box-shadow: 0 1px 3px #d4d4d4;
+	box-shadow: 0 1px 3px #d4d4d4;

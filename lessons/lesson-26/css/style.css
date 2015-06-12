@@ -1,0 +1,42 @@
+h1 {
+	margin-top: 0;
+}
+.container {
+	width: 600px;
+	margin: auto;
+	box-shadow: 0 0 20px rgba(0,0,0,.1);
+	box-sizing: border-box;
+	padding: 3em;
+	position: relative;
+}
+
+ul {
+	list-style: none;
+	margin-top: 2em;
+	padding: 0;
+}
+
+.actor_info {
+	background: #e3e3e3;
+	padding: 3em;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	width: inherit;
+	left: 0;
+	display: none;
+}
+
+.actor_info p { margin: 0;}
+
+li {
+	cursor: pointer;
+}
+
+.close {
+	font-weight: bold;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>AJAX: load</title>
+</head>
+<body>
+
+<nav>
+	<ul>
+		<li><a href="about.html">About</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+</nav>
+
+<div class="wrap"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+
+<script>
+
+(function() {
+	var wrap = $('div.wrap');
+
+	$('a').on('click', function( e ) {
+		var href = $(this).attr('href');
+
+		wrap.load( href + ' .container' );
+
+		e.preventDefault();
+	});	
+})();
+
+	
+
+
+</script>
+
+</body>
+</html>
+
+
+

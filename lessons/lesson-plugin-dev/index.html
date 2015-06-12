@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>jQuery Plugins</title>
+</head>
+<body>
+
+<h1>My Tweets</h1>
+<div class="tweets"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="searchTwitter.jquery.js"></script>
+
+<script>
+$('div.tweets').queryTwitter({
+	search: 'your',
+	limit: 10,
+	// onComplete: function() {
+	// 	console.log(arguments);
+	// },
+	refresh: 4000,
+	transition: 'slideToggle'
+});
+
+</script>
+
+
+
+</body>
+</html>
+
+
+

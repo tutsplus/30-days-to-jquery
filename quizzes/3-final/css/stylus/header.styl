@@ -1,0 +1,217 @@
+#header-wrap
+	background #373232 url(../images/bg-header.jpg) repeat-x 0 0
+	min-width 1000px 
+
+header 
+	overflow hidden
+	padding-bottom 19px
+	margin 0 auto
+	width 1000px
+
+header .logo 
+	background url(../images/logo.png) no-repeat
+	display block
+	float left
+	height 29px
+	margin-top 19px
+	text-indent -9999px
+	width 252px
+
+
+header ul.main-navigation 
+	float left
+	margin 19px 0 0 25px
+
+ul.main-navigation li 
+	display block
+	float left
+  
+ul.main-navigation li a 
+	background #272424
+	color #eeeddf
+	display block
+	float left
+	font-family MuseoSansRounded-500, Helvetica, Arial, sans-serif
+	font-size 12px
+	line-height 12px
+	margin-right 12px
+	padding 7px 12px
+	text-decoration none
+	text-shadow 0 1px 1px #000
+	text-transform uppercase
+	/* CSS3 */
+	-webkit-border-radius 3px
+	-moz-border-radius 3px
+	border-radius 3px
+    
+ul.main-navigation li a.support-link 
+	background #272424 url(../images/sprite-mini-icons.png) no-repeat 2px -129px
+	padding-left 28px
+    
+ul.main-navigation li a.facebook-link,
+ul.main-navigation li a.twitter-link 
+	background #272424 url(../images/sprite-mini-icons.png) no-repeat 1px -79px
+	margin-right 8px
+	text-indent -9999px
+	width 3px
+	-webkit-border-radius 20px
+	-moz-border-radius 20px
+	border-radius 20px
+
+ul.main-navigation li a.twitter-link 
+	background-position 2px -104px
+
+ul.main-navigation li a:hover,
+ul.main-navigation li.active a 
+	background-color #000
+	-moz-box-shadow 0px 1px 0px #363131
+	-webkit-box-shadow 0px 1px 0px #363131
+	box-shadow 0px 1px 0px #363131
+    
+/* User Info */
+#user-info ul 
+	float right
+	margin 19px 0 0 0
+
+#user-info ul li 
+	display block
+	float left
+	position relative
+
+#user-info ul li > a 
+	background none
+	color #eeeddf
+	display block
+	float left
+	font-family MuseoSansRounded-500, Helvetica, Arial, sans-serif
+	font-size 12px
+	line-height 12px
+	margin-left 10px
+	padding 7px 10px
+	text-decoration none
+	text-shadow 0 1px 1px #000
+	text-transform uppercase
+	/* CSS3 */
+	-webkit-border-radius 3px
+	-moz-border-radius 3px
+	border-radius 3px
+    
+#user-info ul li a.sign-out 
+	background url(../images/sprite-mini-icons.png) no-repeat 0px -160px
+	padding-left 25px
+
+#user-info ul li a.sign-in 
+	background url(../images/sprite-mini-icons.png) no-repeat 0px -160px
+	padding-left 25px
+
+#user-info ul li a.join-premium 
+	background url(../images/sprite-mini-icons.png) no-repeat 2px -190px
+	padding-left 25px
+
+#user-info ul li a.my-account 
+	background url(../images/sprite-mini-icons.png) no-repeat 2px -220px
+	padding-left 25px
+    
+#user-info ul li > a:hover 
+	background-color #000
+
+#user-info ul li > ul 
+	display none
+    
+#user-info ul.show-login 
+	background #f1f1f1
+	color #525252
+	display block
+	float left
+	left -220px
+	text-shadow 0px 1px 0px #fff
+	padding 12px 12px 22px 12px
+	position absolute
+	width 320px
+	z-index 100
+	/* CSS3 */
+	-webkit-border-radius 4px
+	-moz-border-radius 4px
+	border-radius 4px
+	-webkit-box-shadow 0 2px 4px rgba(0, 0, 0, 0.3)
+	-moz-box-shadow 0 2px 4px rgba(0, 0, 0, 0.3)
+	box-shadow 0 2px 4px rgba(0, 0, 0, 0.3)
+    
+#user-info ul.show-login:before 
+	background url(../images/drop-arrow.png) no-repeat 0 0
+	content '\0020'
+	display block
+	height 7px
+	position absolute
+	top -6px
+	right 68px
+	width 13px
+    
+#user-info ul.show-login #loginform 
+	display block
+
+#user-info ul.show-login #sendpassform 
+	display none
+
+#user-info legend 
+	font-weight bold
+	padding 0 0 0 10px
+
+#user-info p 
+	float left
+	padding-bottom 10px
+
+#user-info p.p-last 
+	padding 0 10px
+	width 300px
+        
+#user-info label 
+	padding 0 10px
+
+#user-info #loginform label 
+	display none
+
+#user-info input[type="text"],
+#user-info input[type="password"] 
+	background #fff !important
+	border 1px solid #dfdfdf
+	color #444
+	float left
+	font-size 12px
+	line-height 12px
+	margin 5px 10px
+	padding 2px 5px 3px 5px
+	width 128px
+	/* CSS3 */
+	-webkit-border-radius 2px
+	-moz-border-radius 2px
+	border-radius 2px
+
+#user-info #sendpassform input[type="text"] 
+	width 288px
+          
+#user-info input[type="text"]::-webkit-input-placeholder,
+#user-info input[type="password"]::-webkit-input-placeholder 
+	padding-top 1px
+	color #999
+
+#user-info input[type="text"]::-moz-placeholder,
+#user-info input[type="password"]::-moz-placeholder 
+	padding-top 2px
+	color #999
+
+#user-info a.forgot-pass-link,
+#user-info a.log-in-link 
+	color #6d6d6d
+	font-size 10px
+	margin-left 120px
+
+#user-info a.log-in-link 
+	margin-left 142px
+
+#user-info a:hover.forgot-pass-link,
+#user-info a:hover.log-in-link 
+	text-decoration none
+
+#user-info input.orange-button 
+	float right !important

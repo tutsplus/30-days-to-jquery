@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>AJAX: POST</title>
+</head>
+<body>
+
+<h1>Something to Save</h1>
+<form action="#">
+	<textarea name="content" id="content" cols="30" rows="10"></textarea>
+	<p><button type="submit">Save</button></p>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script>
+
+	$.post( 'load.php', function(data) {
+		if ( data ) {
+			$('#content').val( data );
+		}
+	});
+
+
+	// listen for click
+	$('form').on('submit', function(e) {
+		$.post( 'save.php', $(this).serialize(), function(response) {
+			alert( response );
+		});
+		// disable default action
+		e.preventDefault();
+	});
+
+	
+
+	// grab textarea content
+
+	// post content to script, and save
+</script>
+	
+</body>
+</html>
+
+
+

@@ -1,0 +1,21 @@
+.quiz-crumbs
+	border-bottom 1px dashed #d0cfc3
+
+	li
+		display inline
+
+		&:after
+			content: '\\'
+			color black-shade
+			padding-left 5px
+			padding-right 5px
+
+		&:last-child
+			font-weight bold
+		
+			&:after
+				content: none
+
+.quiz-crumbs.wrap
+	padding-bottom 15px
+	padding-top 12px

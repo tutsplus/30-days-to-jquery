@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>jQuery Deferreds</title>
+</head>
+<body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+
+<script>
+
+function getTweets( search ) {
+	return $.ajax({
+		url: 'http://search.twitter.com/search.json',
+		data: { q: search },
+		dataType: 'jsonp'
+	});
+}
+
+
+$.when( getTweets('dogs'), getTweets('cats') ).done(function(results1, results2) {
+	console.log(results1);
+	console.log(results2);
+});
+
+	
+// $.searchTwitter = function( search ) {
+// 	return $.ajax({
+// 		url: 'http://search.twitter.com/search.json',
+// 		data: { q: search },
+// 		dataType: 'jsonp'
+// 	}).promise();
+// };
+
+// var outer = $.searchTwitter('cats');
+
+// outer.then(function	( results ) {
+// 	console.log(results);
+// });
+
+// // ...
+
+// outer.then(function(results) {
+// 	console.log(results);
+// });
+
+
+
+</script>
+
+</body>
+</html>
+
+
+

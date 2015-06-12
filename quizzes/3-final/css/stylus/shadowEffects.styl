@@ -1,0 +1,33 @@
+flipped(direction)
+    content ''
+    position absolute
+    z-index -1
+    bottom 15px
+    width 70%
+    height 20%
+   
+    box-shadow 0 15px 10px -2px rgba(0, 0, 0, .2)
+    display block
+
+    if direction == 'left'
+        transform(rotate(-3deg)); 
+        left 10px
+    else
+        transform(rotate(3deg));
+        right 10px
+
+.fancy-shadow:after
+    flipped(left)
+
+.fancy-shadow:before
+    flipped(right) 
+
+// Stupid browser bug means I can't combine these four
+.fancy-shadow.correct:after,
+.fancy-shadow.correct:before
+    content: none
+
+.fancy-shadow.incorrect:after,
+.fancy-shadow.incorrect:before
+    content: none    
+    

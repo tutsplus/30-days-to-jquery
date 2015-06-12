@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title></title>
+	<style>
+	body { font-family: helvetica; margin: 0;}
+	.alternate li:nth-child(even) { background: #e3e3e3;}
+	.box { width: 200px; height: 200px; background: red; text-align: center; line-height: 200px;}
+	</style>
+
+	<style id="userCSS"></style>
+</head>
+<body>
+
+<div class="prep">
+</div>
+
+<div class="markup">
+	<!-- user's html goes here -->
+</div>
+
+<script id="jquery" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script id="userScript">
+	// quiz taker's script goes here
+	window.acceptJS = function(code) {
+		try {
+			eval(code);
+		} catch(e) { return false; }
+	};
+</script>
+
+<script>
+	(function iFrameReady() {
+		if ( parent.Quiz && parent.Quiz.layout ) {
+			parent.Quiz.layout.iframeReady();
+		} else {
+			setTimeout(iFrameReady, 20);
+		}
+	})();
+</script>
+</body>
+</html>
